@@ -69,4 +69,4 @@ CREATE TABLE FoodVendors (
     name VARCHAR(100) NOT NULL,
     menu_items TEXT,
     location VARCHAR(100)
-); 
+);
