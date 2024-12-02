@@ -8,7 +8,7 @@ CSC 4402 Group Project
 4. Right Click on Table and Select 'Table Data Import Wizard'
 5. Select the CSV File 
 6. Select Existing Table and Choose the Table that Matches the Name of the CSV File
-7. Press 'next' until it was successfully completed
+7. Press 'next' until it was successfully completed and gives the option to press 'finish'
 8. Repeat the Above Steps for All CSV Files to Fill the Database for All the Tables
 
 ## Setting Up mySQL in Visual Studio Code (ensure proper extensions are installed):
