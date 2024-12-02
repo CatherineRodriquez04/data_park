@@ -28,7 +28,7 @@ FROM Rides<br>
 WHERE wait_time > 30 AND capacity > 10;<br>
 
 Answer:
-| Name            | Wait Time (min) | Capacity |
+| name            | wait_time       | capacity |
 |-----------------|-----------------|----------|
 | Cosmic Swinger  | 40              | 12       |
 | The Void Drop   | 40              | 12       |
@@ -44,7 +44,7 @@ FROM Staff<br>
 GROUP BY role;<br>
 
 Answer:
-| Role                   | Average Pay ($) |
+| role                   | average_pay     |
 |------------------------|-----------------|
 | Ride Operator          | 16.40           |
 | Ticketing Agent        | 11.00           |
@@ -68,7 +68,7 @@ ORDER BY frequency DESC<br>
 LIMIT 1;<br>
 
 Answer:
-| Menu Items  | Frequency |
+| menu_items  | frequency |
 |-------------|-----------|
 | Greek Gyro  | 2         |
 <br>
@@ -81,7 +81,7 @@ FROM Rides<br>
 WHERE thrill_level = 'high';
 
 Answer:
-| Name          | Wait Time (min) |
+| name          | wait_time |
 |---------------|-----------------|
 | Thunderclap   | 60              |
 | The Void Drop | 40              |
@@ -97,7 +97,7 @@ GROUP BY location<br>
 ORDER BY vendor_count DESC;<br>
 
 Answer:
-| Location            | Vendor Count |
+| location            | vendor_count |
 |---------------------|--------------|
 | California          | 4            |
 | Florida             | 2            |
