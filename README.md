@@ -1,7 +1,7 @@
-# data_park
+# Data Park
 CSC 4402 Group Project
 
-Steps for Importing Database Into MySQL WorkBench:
+## Steps for Importing Database Into MySQL WorkBench:
 1. Connect to LocalHost on MySQL
 2. Click Schemas 
 3. Click Triangle Next to am_park
@@ -24,13 +24,11 @@ FROM Rides
 WHERE wait_time > 30 AND capacity > 10;
 
 ANSWER:
-+----------------+-----------+----------+
-| name           | wait_time | capacity |
-+----------------+-----------+----------+
-| Cosmic Swinger |        40 |       12 |
-| The Void Drop  |        40 |       12 |
-| Steel Dragon   |        80 |       20 |
-+----------------+-----------+----------+
+| Name            | Wait Time (min) | Capacity |
+|-----------------|-----------------|----------|
+| Cosmic Swinger  | 40              | 12       |
+| The Void Drop   | 40              | 12       |
+| Steel Dragon    | 80              | 20       |
 
 
 (2) Select average pay by role
@@ -40,19 +38,17 @@ FROM Staff
 GROUP BY role;
 
 ANSWER:
-+------------------------+-------------+
-| role                   | average_pay |
-+------------------------+-------------+
-| Ride Operator          |       16.40 |
-| Ticketing Agent        |       11.00 |
-| Security Officer       |       17.25 |
-| Entertainer            |       25.00 |
-| Park Manager           |       40.00 |
-| Maintenance Technician |       19.33 |
-| Nurse                  |       22.00 |
-| Custodian              |       27.50 |
-| Photographer           |       23.00 |
-+------------------------+-------------+
+| Role                   | Average Pay ($) |
+|------------------------|-----------------|
+| Ride Operator          | 16.40           |
+| Ticketing Agent        | 11.00           |
+| Security Officer       | 17.25           |
+| Entertainer            | 25.00           |
+| Park Manager           | 40.00           |
+| Maintenance Technician | 19.33           |
+| Nurse                  | 22.00           |
+| Custodian              | 27.50           |
+| Photographer           | 23.00           |
 
 
 (3) Select the most popular menu item
@@ -64,11 +60,9 @@ ORDER BY frequency DESC
 LIMIT 1;
 
 ANSWER:
-+------------+-----------+
-| menu_items | frequency |
-+------------+-----------+
-| Greek Gyro |         2 |
-+------------+-----------+
+| Menu Items  | Frequency |
+|-------------|-----------|
+| Greek Gyro  | 2         |
 
 (4) Find all high-thrill rides and their respective wait times
 
@@ -77,13 +71,11 @@ FROM Rides
 WHERE thrill_level = 'high';
 
 ANSWER:
-+---------------+-----------+
-| name          | wait_time |
-+---------------+-----------+
-| Thunderclap   |        60 |
-| The Void Drop |        40 |
-| Steel Dragon  |        80 |
-+---------------+-----------+
+| Name          | Wait Time (min) |
+|---------------|-----------------|
+| Thunderclap   | 60              |
+| The Void Drop | 40              |
+| Steel Dragon  | 80              |
 
 (5) Count the number of food vendors by location
 
@@ -93,18 +85,16 @@ GROUP BY location
 ORDER BY vendor_count DESC;
 
 ANSWER:
-+----------------------+--------------+
-| location             | vendor_count |
-+----------------------+--------------+
-| California           |            4 |
-| Florida              |            2 |
-| Arizona              |            1 |
-| Ohio                 |            1 |
-| Minnesota            |            1 |
-| District of Columbia |            1 |
-| Texas                |            1 |
-| Georgia              |            1 |
-+----------------------+--------------+
+| Location            | Vendor Count |
+|---------------------|--------------|
+| California          | 4            |
+| Florida             | 2            |
+| Arizona             | 1            |
+| Ohio                | 1            |
+| Minnesota           | 1            |
+| District of Columbia| 1            |
+| Texas               | 1            |
+| Georgia             | 1            |
 
 (6) Insert and Delete a Visitor
 
