@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+@layer base {
+  body {
+      @apply font-primary bg-primary text-black leading-loose;
+  }
+  .h1 {
+      @apply text-[38px] xl:text-[58px] leading-[1.1] font-semibold;
+  }
+  .h2 {
+      @apply text-[28px] xl:text-[48px] leading-[1.1] font-semibold;
+  }
+  .h3 {
+      @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
+  }
+  .text-outline{
+      -webkit-text-stroke: 1px #ffffff;
+  }
+  .text-outline-hover{
+      -webkit-text-stroke: 1px black;
+  }
+}

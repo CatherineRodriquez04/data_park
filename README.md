@@ -8,13 +8,17 @@ Steps for Importing Database Into MySQL WorkBench:
 4. Right Click on Table and Select 'Table Data Import Wizard'
 5. Select the CSV File 
 6. Choose Correct Table to Connect to the DB 
+7. Repeat the above steps for all csv files to fill the database for all the tables
 
-Repeat the above steps for all csv files to fill the database for all the tables.
-
-Open Visual Studio Code (ensure you have proper extensions):
+Setting Up mySQL in Visual Studio Code (ensure proper extensions):
 1. In Terminal: mysql -u root -p
 2. Enter your localhost password
 3. SELECT * FROM (choose any table name to ensure the database was filled properly from your workbench)
+
+Frontend:
+1. cd frontend
+2. npm run build
+3. npm start (editing phase: npm run dev)
 
 Test Queries:
 (1) Select rides with wait time over 30 minutes and capacity over 12
