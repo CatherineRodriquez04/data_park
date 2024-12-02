@@ -10,17 +10,17 @@ CSC 4402 Group Project
 6. Choose Correct Table to Connect to the DB 
 7. Repeat the above steps for all csv files to fill the database for all the tables
 
-Setting Up mySQL in Visual Studio Code (ensure proper extensions):
+## Setting Up mySQL in Visual Studio Code (ensure proper extensions):
 1. In Terminal: mysql -u root -p
 2. Enter your localhost password
 3. SELECT * FROM (choose any table name to ensure the database was filled properly from your workbench)
 
-Frontend:
+## Frontend:
 1. cd frontend
 2. npm run build
 3. npm start (editing phase: npm run dev)
 
-Test Queries:
+## Test Queries:
 (1) Select rides with wait time over 30 minutes and capacity over 12
 
 SELECT name, wait_time, capacity
