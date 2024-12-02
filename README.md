@@ -3,12 +3,13 @@ CSC 4402 Group Project
 
 ## Steps for Importing Database Into MySQL WorkBench:
 1. Connect to LocalHost on MySQL
-2. Click Schemas 
-3. Click Triangle Next to am_park
+2. Click Schemas (located next to administration)
+3. Click Triangle Next to am_park (if am_park does not show up then click the datapark file followed by clicking the lightening bolt to load the database and tables)
 4. Right Click on Table and Select 'Table Data Import Wizard'
 5. Select the CSV File 
-6. Choose Correct Table to Connect to the DB 
-7. Repeat the above steps for all csv files to fill the database for all the tables
+6. Select Existing Table and Choose the Table that Matches the Name of the CSV File
+7. Press 'next' until it was successfully completed
+8. Repeat the Above Steps for All CSV Files to Fill the Database for All the Tables
 
 ## Setting Up mySQL in Visual Studio Code (ensure proper extensions are installed):
 1. In Terminal: mysql -u root -p
