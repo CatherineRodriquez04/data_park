@@ -10,7 +10,7 @@ CSC 4402 Group Project
 6. Choose Correct Table to Connect to the DB 
 7. Repeat the above steps for all csv files to fill the database for all the tables
 
-## Setting Up mySQL in Visual Studio Code (ensure proper extensions):
+## Setting Up mySQL in Visual Studio Code (ensure proper extensions are installed):
 1. In Terminal: mysql -u root -p
 2. Enter your localhost password
 3. SELECT * FROM (choose any table name to ensure the database was filled properly from your workbench)
@@ -21,27 +21,29 @@ CSC 4402 Group Project
 3. npm start (editing phase: npm run dev)
 
 ## Test Queries:
-(1) Select rides with wait time over 30 minutes and capacity over 12
+1. Select rides with wait time over 30 minutes and capacity over 12<br>
 
-SELECT name, wait_time, capacity
-FROM Rides
-WHERE wait_time > 30 AND capacity > 10;
+SELECT name, wait_time, capacity<br>
+FROM Rides<br>
+WHERE wait_time > 30 AND capacity > 10;<br>
 
-ANSWER:
+Answer:
 | Name            | Wait Time (min) | Capacity |
 |-----------------|-----------------|----------|
 | Cosmic Swinger  | 40              | 12       |
 | The Void Drop   | 40              | 12       |
 | Steel Dragon    | 80              | 20       |
+<br>
+<br>
 
 
-(2) Select average pay by role
+2. Select average pay by role<br>
 
-SELECT role, ROUND(AVG(pay), 2) AS average_pay
-FROM Staff
-GROUP BY role;
+SELECT role, ROUND(AVG(pay), 2) AS average_pay<br>
+FROM Staff<br>
+GROUP BY role;<br>
 
-ANSWER:
+Answer:
 | Role                   | Average Pay ($) |
 |------------------------|-----------------|
 | Ride Operator          | 16.40           |
@@ -53,42 +55,48 @@ ANSWER:
 | Nurse                  | 22.00           |
 | Custodian              | 27.50           |
 | Photographer           | 23.00           |
+<br>
+<br>
 
 
-(3) Select the most popular menu item
+3. Select the most popular menu item<br>
 
-SELECT menu_items, COUNT(*) AS frequency
-FROM FoodVendors
-GROUP BY menu_items
-ORDER BY frequency DESC
-LIMIT 1;
+SELECT menu_items, COUNT(*) AS frequency<br>
+FROM FoodVendors<br>
+GROUP BY menu_items<br>
+ORDER BY frequency DESC<br>
+LIMIT 1;<br>
 
-ANSWER:
+Answer:
 | Menu Items  | Frequency |
 |-------------|-----------|
 | Greek Gyro  | 2         |
+<br>
+<br>
 
-(4) Find all high-thrill rides and their respective wait times
+4. Find all high-thrill rides and their respective wait times<br>
 
-SELECT name, wait_time
-FROM Rides
+SELECT name, wait_time<br>
+FROM Rides<br>
 WHERE thrill_level = 'high';
 
-ANSWER:
+Answer:
 | Name          | Wait Time (min) |
 |---------------|-----------------|
 | Thunderclap   | 60              |
 | The Void Drop | 40              |
 | Steel Dragon  | 80              |
+<br>
+<br>
 
-(5) Count the number of food vendors by location
+5. Count the number of food vendors by location<br>
 
-SELECT location, COUNT(*) AS vendor_count
-FROM FoodVendors
-GROUP BY location
-ORDER BY vendor_count DESC;
+SELECT location, COUNT(*) AS vendor_count<br>
+FROM FoodVendors<br>
+GROUP BY location<br>
+ORDER BY vendor_count DESC;<br>
 
-ANSWER:
+Answer:
 | Location            | Vendor Count |
 |---------------------|--------------|
 | California          | 4            |
@@ -99,11 +107,25 @@ ANSWER:
 | District of Columbia| 1            |
 | Texas               | 1            |
 | Georgia             | 1            |
+<br>
+<br>
 
-(6) Insert and Delete a Visitor
+6. Insert and Delete a Visitor<br>
 
-INSERT INTO Visitors (name, age, preferences, virtual_currency_balance)
+(insert)<br>
+INSERT INTO Visitors (name, age, preferences, virtual_currency_balance)<br>
 VALUES ('Jane Smith', 30, 'Water rides, Relaxing activities', 25.00);
 
-DELETE FROM Visitors
+View that visitor was added:<br>
+SELECT * FROM Visitors<br>
+WHERE name = 'Jane Smith' AND age = 30;<br>
+
+<br>
+
+(delete)<br>
+DELETE FROM Visitors<br>
+WHERE name = 'Jane Smith' AND age = 30;
+
+View that visitor was deleted: <br>
+SELECT * FROM Visitors<br>
 WHERE name = 'Jane Smith' AND age = 30;
