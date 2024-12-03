@@ -18,22 +18,23 @@ CSC 4402 Group Project
 
 ## Frontend:
 1. cd frontend
-2. npm run build
-3. npm start (editing phase: npm run dev)
+2. npm install
+3. npm run build
+4. npm start (editing phase: npm run dev)
 
 ## Test Queries:
-1. Select rides with wait time over 30 minutes and capacity over 12<br>
+1. Select rides with wait time under 30 minutes and capacity over 10<br>
 
 SELECT name, wait_time, capacity<br>
 FROM Rides<br>
-WHERE wait_time > 30 AND capacity > 10;<br>
+WHERE wait_time <= 30 AND capacity > 10;<br>
 
 Answer:
 | name            | wait_time       | capacity |
 |-----------------|-----------------|----------|
-| Cosmic Swinger  | 40              | 12       |
-| The Void Drop   | 40              | 12       |
-| Steel Dragon    | 80              | 20       |
+| Vertigo Peak    | 25              | 14       |
+| Meteor Madness  | 30              | 16       |
+| Turbo Twister   | 10              | 25       |
 <br>
 <br>
 
@@ -75,39 +76,37 @@ Answer:
 <br>
 <br>
 
-4. Find all high-thrill rides and their respective wait times<br>
+4. Find the name and price of merchandise items with a price less than 20<br> 
 
-SELECT name, wait_time<br>
-FROM Rides<br>
-WHERE thrill_level = 'high';
+SELECT name, price<br>
+FROM Merchandise<br>
+WHERE price < 40;<br>
 
 Answer:
-| name          | wait_time |
-|---------------|-----------------|
-| Thunderclap   | 60              |
-| The Void Drop | 40              |
-| Steel Dragon  | 80              |
+| name         | price   |
+|--------------|---------|
+| Hat          | 14.99   |
+| Keychain     | 4.99    |
+| Souvenir Cup | 9.99    |
+| Stickers     | 4.99    |
 <br>
 <br>
 
-5. Count the number of food vendors by location<br>
+5. Find the event names and schedules where the location is 'Whole Park'<br> 
 
-SELECT location, COUNT(*) AS vendor_count<br>
-FROM FoodVendors<br>
-GROUP BY location<br>
-ORDER BY vendor_count DESC;<br>
+SELECT name, schedule<br>
+FROM InParkEvents<br>
+WHERE location = 'Whole Park';<br>
 
 Answer:
-| location            | vendor_count |
-|---------------------|--------------|
-| California          | 4            |
-| Florida             | 2            |
-| Arizona             | 1            |
-| Ohio                | 1            |
-| Minnesota           | 1            |
-| District of Columbia| 1            |
-| Texas               | 1            |
-| Georgia             | 1            |
+| name                  | schedule       |
+|-----------------------|----------------|
+| Summer Splash Bash    | 6/1 - 9/1      |
+| Fright Fest           | 10/1 -10/31    |
+| Turkey Fest           | 11/1  - 11/30  |
+| Winter Wonderland     | 12/1 - 1/15    |
+| Fireworks             | 8pm            |
+
 <br>
 <br>
 
