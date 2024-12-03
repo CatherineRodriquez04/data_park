@@ -17,6 +17,7 @@
     "@radix-ui/react-tooltip": "^1.1.4",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "frontend": "file:",
     "lucide-react": "^0.462.0",
     "mysql2": "^3.11.5",
     "next": "15.0.3",

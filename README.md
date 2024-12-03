@@ -126,6 +126,10 @@ SELECT * FROM Visitors<br>
 WHERE name = 'Jane Smith' AND age = 30;<br>
 
 <br>
+| name         | price   | age  | preferences                       | virtual_currency_balance |
+|--------------|---------|------|-----------------------------------|--------------------------|
+| Hat          | 14.99   | 30   | Water rides, Relaxing activities  | 25.00                    |
+
 
 (delete)<br>
 DELETE FROM Visitors<br>
@@ -133,4 +137,6 @@ WHERE name = 'Jane Smith' AND age = 30;
 
 View that visitor was deleted: <br>
 SELECT * FROM Visitors<br>
-WHERE name = 'Jane Smith' AND age = 30;
+WHERE name = 'Jane Smith' AND age = 30;<br><br>
+
+Empty set
